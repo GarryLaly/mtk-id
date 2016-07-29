@@ -1,2 +1,2 @@
 # mtk-id
-Belajar Matematika Indonesia lebih menyenangkan
+Learn Mathematics with Fun
