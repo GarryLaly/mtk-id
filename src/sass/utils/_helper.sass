@@ -1,0 +1,106 @@
+// =========
+//  Margin
+// =======
+
+$theSize: 0, 5, 10, 15, 20, 25, 35
+$orientations: (t: top, b: bottom, l: left, r: right)
+
+.m
+  @each $orientation, $direction in $orientations
+    &#{$orientation}
+      @each $size in $theSize
+        &-#{$size}
+          margin-#{$direction}: #{$size}px
+        &-n-#{$size}
+          margin-#{$direction}: -#{$size}px
+
+
+    @each $size in $theSize
+      &-#{$size}
+        margin: #{$size}px
+      &-v-#{$size}
+        margin: #{$size}px 0
+      &-h-#{$size}
+        margin: 0 #{$size}px
+
+// =========
+//  Padding
+// =======
+.p
+  @each $orientation, $direction in $orientations
+    &#{$orientation}
+      @each $size in $theSize
+        &-#{$size}
+          padding-#{$direction}: #{$size}px
+
+    @each $size in $theSize
+      &-#{$size}
+        padding: #{$size}px
+      &-v-#{$size}
+        padding: #{$size}px 0
+      &-h-#{$size}
+        padding: 0 #{$size}px
+
+.w
+  &-0
+    width: 0px
+  &-100
+    width: 100%
+
+
+.light-text
+  font-weight: 300
+.normal-text
+  font-weight: 400
+.bold-text
+  font-weight: 700
+
+.big-text
+  font-size: 1.2em
+.bigger-text
+  font-size: 1.7em
+
+.fz-50
+  font-size: 50px
+
+.uppercase-text
+  text-transform: uppercase
+
+.color
+  // Color Variation
+  @each $class, $color in $classList
+    @if $class != default
+      &-#{$class}
+        color: #{$color}
+
+  &-black
+    color: $black
+
+  &-white
+    color: #FFF
+
+  &-blue-400
+    color: $blue-400
+
+.bg
+  // Color Variation
+  @each $class, $color in $classList
+    @if $class != default
+      &-#{$class}
+        background: #{$color}
+
+  &-blue
+    &-400
+      background: $blue-400
+    &-500
+      background: $blue-500
+    &-600
+      background: $blue-600
+
+.op-50
+  opacity: 0.5
+.op-70
+  opacity: 0.7
+
+.circle
+  border-radius: 50%
