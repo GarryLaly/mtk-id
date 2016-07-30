@@ -4,11 +4,11 @@
 
   <div class="OuterWrapper">
 
-    <component-sidebar></component-sidebar>
+    <menu-sidebar></menu-sidebar>
 
-    <main-wrapper><main-wrapper>
-
-    <aside class="DetailSidebar"></aside>
+    <div class="MainWrapper">
+      <router-view></router-view>
+    </div>
 
   </div>
 
@@ -20,12 +20,11 @@
   require('../../sass/main.sass')
 
   import HeaderTop from './layout/HeaderTop.vue';
-  import ComponentSidebar from './layout/ComponentSidebar.vue';
-  import MainWrapper from './layout/MainWrapper.vue';
+  import MenuSidebar from './layout/MenuSidebar.vue';
 
   export default {
 
-    components: { HeaderTop, ComponentSidebar, MainWrapper }
+    components: { HeaderTop, MenuSidebar }
 
   };
 
