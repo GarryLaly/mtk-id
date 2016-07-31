@@ -1,0 +1,1 @@
+export const getBangunDatarModal = state => state.bangundatar.showModal;

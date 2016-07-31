@@ -17,14 +17,17 @@
 <script>
 
 
-  require('../../sass/main.sass')
+  require('../../sass/main.sass');
+  
+  import store from '../vuex/store.js';
 
   import HeaderTop from './layout/HeaderTop.vue';
   import MenuSidebar from './layout/MenuSidebar.vue';
 
   export default {
 
-    components: { HeaderTop, MenuSidebar }
+    components: { HeaderTop, MenuSidebar },
+    store: store
 
   };
 
